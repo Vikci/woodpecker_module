@@ -1,0 +1,25 @@
+{
+  "name": "Vikci/module_pecker",
+  "description": "OpenEMR Custom Module WoodPecker Copilot Project",
+  "type": "openemr-module",
+  "authors": [
+    {
+      "name": "Vikci",
+      "role": "Developer"
+    }
+  ],
+  "keywords": ["openemr", "openemr-module"],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {"OpenEMR\\Modules\\CustomModuleWpecker\\": "src/"}
+  },
+  "require": {
+    "openemr/oe-module-installer-plugin": "^0.1.0",
+    "php": ">= 7.4",
+    "symfony/event-dispatcher": "^4.4.0",
+    "nyholm/psr7": "^1.4"
+  },
+  "conflict": {
+    "openemr/openemr": "<6.0.0"
+  }
+}
