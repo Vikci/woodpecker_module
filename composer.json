@@ -1,5 +1,5 @@
 {
-  "name": "Vikci/module_pecker",
+  "name": "vikci/module_pecker",
   "description": "OpenEMR Custom Module WoodPecker Copilot Project",
   "type": "openemr-module",
   "authors": [
