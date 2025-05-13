@@ -21,5 +21,10 @@
   },
   "conflict": {
     "openemr/openemr": "<6.0.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "openemr/oe-module-installer-plugin": true
+    }
   }
 }
