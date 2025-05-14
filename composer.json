@@ -10,7 +10,8 @@
     }
   ],
   "keywords": ["openemr", "openemr-module"],
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "autoload": {
     "psr-4": {"OpenEMR\\Modules\\CustomModuleWpecker\\": "src/"}
   },
