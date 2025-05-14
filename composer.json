@@ -2,6 +2,7 @@
   "name": "vikci/module_pecker",
   "description": "OpenEMR Custom Module WoodPecker Copilot Project",
   "type": "openemr-module",
+  "license": "GPL-3.0-only",
   "authors": [
     {
       "name": "Vikci",
