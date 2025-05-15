@@ -14,7 +14,7 @@
  * @license   https://github.com/openemr/openemr/blob/master/LICENSE GNU General Public License 3
  */
 
-namespace OpenEMR\Modules\CustomModuleWpecker;
+namespace OpenEMR\Modules\CustomModuleSkeleton;
 
 /**
  * Note the below use statements are importing classes from the OpenEMR core codebase
@@ -36,7 +36,7 @@ use Twig\Error\LoaderError;
 use Twig\Loader\FilesystemLoader;
 
 // we import our own classes here.. although this use statement is unnecessary it forces the autoloader to be tested.
-use OpenEMR\Modules\CustomModuleWpecker\CustomSkeletonRestController;
+use OpenEMR\Modules\CustomModuleSkeleton\CustomSkeletonRestController;
 
 
 class Bootstrap
@@ -161,8 +161,8 @@ class Bootstrap
     public function renderMainBodyScripts(RenderEvent $event)
     {
         ?>
-        <link rel="stylesheet" href="<?php echo $this->getAssetPath();?>css/module.css">
-        <script src="<?php echo $this->getAssetPath();?>js/module.js"></script>
+        <link rel="stylesheet" href="<?php echo $this->getAssetPath();?>css/skeleton-module.css">
+        <script src="<?php echo $this->getAssetPath();?>js/skeleton-module.js"></script>
         <?php
     }
 
@@ -211,7 +211,7 @@ class Bootstrap
         $menuItem->label = xlt("Custom Module Skeleton");
         // TODO: pull the install location into a constant into the codebase so if OpenEMR changes this location it
         // doesn't break any modules.
-        $menuItem->url = "/interface/modules/custom_modules/module_pecker/public/sample-index.php";
+        $menuItem->url = "/interface/modules/custom_modules/oe-module-custom-skeleton/public/sample-index.php";
         $menuItem->children = [];
 
         /**

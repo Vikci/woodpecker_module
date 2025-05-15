@@ -1,30 +1,27 @@
 {
-  "name": "vikci/module_pecker",
-  "description": "OpenEMR Custom Module WoodPecker Copilot Project",
+  "name": "adunsulag/oe-module-custom-skeleton",
+  "description": "OpenEMR Custom Module Skeleton Starter Project",
   "type": "openemr-module",
-  "license": "GPL-3.0-only",
+  "license": "GPL-3.0",
   "authors": [
     {
-      "name": "Vikci",
+      "name": "Stephen Nielson",
+      "email": "stephen@nielson.org",
       "role": "Developer"
     }
   ],
   "keywords": ["openemr", "openemr-module"],
-  "minimum-stability": "dev",
-  "prefer-stable": true,
+  "minimum-stability": "stable",
   "autoload": {
-    "psr-4": {"OpenEMR\\Modules\\CustomModuleWpecker\\": "src/"}
+    "psr-4": {"OpenEMR\\Modules\\CustomModuleSkeleton\\": "src/"}
   },
   "require": {
     "openemr/oe-module-installer-plugin": "^0.1.0",
-    "php": ">= 7.4"
+    "php": ">= 7.4",
+    "symfony/event-dispatcher": "^4.4.0",
+    "nyholm/psr7": "^1.4"
   },
   "conflict": {
     "openemr/openemr": "<6.0.0"
-  },
-  "config": {
-    "allow-plugins": {
-      "openemr/oe-module-installer-plugin": true
-    }
   }
 }
