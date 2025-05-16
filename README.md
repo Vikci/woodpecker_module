@@ -10,14 +10,14 @@ You can do it with the following command:
 ```
 composer config repositories.repo-name vcs https://github.com/<organization or user name>/<repository name>
 ```
-For example to install this skeleton as a module you can run the following
+For example to install this module you can run the following
 ```
 composer config repositories.repo-name vcs https://github.com/Vikci/module_pecker.git
 ```
 
 At that point you can run the install command
 ```
-composer require adunsulag/oe-module-custom-skeleton
+composer require openemr/custom-module-woodpecker
 ```
 
 ### Installing Module via filesystem
@@ -32,10 +32,5 @@ Once your module is installed in OpenEMR custom_modules folder you can activate 
 
   1. Login to your OpenEMR installation as an administrator
   2. Go to your menu and select Modules -> Manage Modules
-  3. Click on the Unregistered tab in your modules list
-  4. Find your module and click the *Register* button.  This will reload the page and put your module in the Registered list tab of your modules
-  5. Now click the *Install* button next your module name.
-  6. Finally click the *Enable* button for your module.
-
-## Contributing
-If you would like to help in improving the skeleton library just post an issue on Github or send a pull request.
+  3. Now click the *Install* button next your module name.
+  4. Finally click the *Enable* button for your module.

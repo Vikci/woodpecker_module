@@ -1,10 +1,7 @@
 <?php
 
 /**
- * Bootstrap custom module skeleton.  This file is an example custom module that can be used
- * to create modules that can be utilized inside the OpenEMR system.  It is NOT intended for
- * production and is intended to serve as the barebone requirements you need to get started
- * writing modules that can be installed and used in OpenEMR.
+ * Bootstrap for the CustomModuleWpecker module.
  *
  * @package   OpenEMR
  * @link      http://www.open-emr.org
@@ -42,7 +39,7 @@ use OpenEMR\Modules\CustomModuleWpecker\CustomSkeletonRestController;
 class Bootstrap
 {
     const MODULE_INSTALLATION_PATH = "/interface/modules/custom_modules/";
-    const MODULE_NAME = "oe-module-custom-skeleton";
+    const MODULE_NAME = "custom-module-woodpecker";
     /**
      * @var EventDispatcherInterface The object responsible for sending and subscribing to events through the OpenEMR system
      */
@@ -120,7 +117,7 @@ class Bootstrap
         global $GLOBALS;
 
         $service = $event->getGlobalsService();
-        $section = xlt("Skeleton Module");
+        $section = xlt("Woodpecker Module");
         $service->createSection($section, 'Portal');
 
         $settings = $this->globalsConfig->getGlobalSettingSectionConfiguration();
