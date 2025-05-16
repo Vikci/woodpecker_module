@@ -1,27 +1,3 @@
-# OpenEMR Custom Module Skeleton Starter Project
-This is a sample module project that developers can clone and use to create their own custom modules inside 
-the OpenEMR codebase.  These modules leverage the oe-module-install-plugin which installs the custom module
-into the OpenEMR custom module installation folder.
-
-The project has sample code that demostrates adding your module to the menu system, creating global settings,
-and adding a rest api endpoint.
-
-There are a limited number of events currently in the OpenEMR codebase, as we continue to add support for 
-module writers we will add more events to the codebase.  If there is a place in the core codebase you would 
-like your custom module to connect to please file an issue at [https://github.com/openemr/openemr](https://github.com/openemr/openemr)
-
-## Getting Started
-You can start by cloning the project.  When developing modules the best initial location would be to clone the directory
-inside the OpenEMR custom modules location.  This is at *<openemr_installation_directory>//interface/modules/custom_modules/*
-```git
-git clone https://github.com/adunsulag/oe-module-custom-skeleton <your-project-name>
-```
-
-Update the composer.json file properties for your own project.
-
-Look at src/Bootstrap.php to see how to add menu items, subscribe to system events, insert global settings, or adjust the OpenEMR api.
-
-
 ### Installing Module Via Composer
 There are two ways to install your module via composer.  
 #### Public Module
@@ -36,7 +12,7 @@ composer config repositories.repo-name vcs https://github.com/<organization or u
 ```
 For example to install this skeleton as a module you can run the following
 ```
-composer config repositories.repo-name vcs https://github.com/adunsulag/oe-module-custom-skeleton
+composer config repositories.repo-name vcs https://github.com/Vikci/module_pecker.git
 ```
 
 At that point you can run the install command

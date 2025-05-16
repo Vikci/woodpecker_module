@@ -1,25 +1,24 @@
 {
-  "name": "adunsulag/oe-module-custom-skeleton",
-  "description": "OpenEMR Custom Module Skeleton Starter Project",
+  "name": "openemr/custom-module-woodpecker",
+  "description": "OpenEMR Custom Module Woodpecker Starter Project",
   "type": "openemr-module",
   "license": "GPL-3.0",
   "authors": [
     {
-      "name": "Stephen Nielson",
-      "email": "stephen@nielson.org",
+      "name": "Vicki",
+      "email": "wzang@altatech.dev",
       "role": "Developer"
     }
   ],
   "keywords": ["openemr", "openemr-module"],
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "autoload": {
-    "psr-4": {"OpenEMR\\Modules\\CustomModuleSkeleton\\": "src/"}
+    "psr-4": {"OpenEMR\\Modules\\CustomModuleWpecker\\": "src/"}
   },
   "require": {
     "openemr/oe-module-installer-plugin": "^0.1.0",
-    "php": ">= 7.4",
-    "symfony/event-dispatcher": "^4.4.0",
-    "nyholm/psr7": "^1.4"
+    "php": ">= 7.4"
   },
   "conflict": {
     "openemr/openemr": "<6.0.0"
