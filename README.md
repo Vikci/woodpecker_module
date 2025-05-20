@@ -1,24 +1,5 @@
 ### Installing Module Via Composer
-There are two ways to install your module via composer.  
-#### Public Module
-We highly encourage you to share your created modules with the OpenEMR community.  To ensure that other developers / users can install
-your packages please register your module on [https://packagist.org/](https://packagist.org/).  Once your module has been registered
-users can install your package by doing a `composer require "<namespace>/<your-package-name>`
-#### Private Module
-If your module is a private module you can still tell composer where to find your module by setting it up to use a private repository.
-You can do it with the following command:
-```
-composer config repositories.repo-name vcs https://github.com/<organization or user name>/<repository name>
-```
-For example to install this module you can run the following
-```
-composer config repositories.repo-name vcs https://github.com/Vikci/module_pecker.git
-```
-
-At that point you can run the install command
-```
-composer require openemr/custom-module-woodpecker
-```
+Install the package by doing a `composer require vikci/module_pecker`
 
 ### Installing Module via filesystem
 If you copy your module into the installation directory you will need to copy your module's composer.json "psr-4" property into your OpenEMR's psr-4 settings.
