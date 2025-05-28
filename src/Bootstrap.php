@@ -146,9 +146,6 @@ class Bootstrap
         if ($this->getGlobalConfig()->getGlobalSetting(GlobalConfig::CONFIG_ENABLE_BODY_FOOTER)) {
             $this->eventDispatcher->addListener(RenderEvent::EVENT_BODY_RENDER_POST, [$this, 'renderMainBodyScripts']);
         }
-        if ($this->getGlobalConfig()->getGlobalSetting(GlobalConfig::CONFIG_OVERRIDE_TEMPLATES)) {
-            $this->eventDispatcher->addListener(TwigEnvironmentEvent::EVENT_CREATED, [$this, 'addTemplateOverrideLoader']);
-        }
     }
 
     /**
