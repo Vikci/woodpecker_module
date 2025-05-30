@@ -46,13 +46,6 @@ class GlobalConfig
      */
     public function isConfigured()
     {
-        $keys = [self::CONFIG_OPTION_TEXT, self::CONFIG_OPTION_ENCRYPTED];
-        foreach ($keys as $key) {
-            $value = $this->getGlobalSetting($key);
-            if (empty($value)) {
-                return false;
-            }
-        }
         return true;
     }
 
@@ -79,19 +72,7 @@ class GlobalConfig
     public function getGlobalSettingSectionConfiguration()
     {
         $settings = [
-            self::CONFIG_OPTION_TEXT => [
-                'title' => 'Description'
-                ,'description' => 'Description for Woodpecker Module'
-                ,'type' => GlobalSetting::DATA_TYPE_TEXT
-                ,'default' => ''
-            ]
-            ,self::CONFIG_OPTION_ENCRYPTED => [
-                'title' => 'Security Key'
-                ,'description' => 'Security Key for Woodpecker Module'
-                ,'type' => GlobalSetting::DATA_TYPE_ENCRYPTED
-                ,'default' => ''
-            ]
-            ,self::CONFIG_ENABLE_MENU => [
+            self::CONFIG_ENABLE_MENU => [
                 'title' => 'Add module menu item'
                 ,'description' => 'Shows adding a menu item to the system (requires logging out and logging in again)'
                 ,'type' => GlobalSetting::DATA_TYPE_BOOL
