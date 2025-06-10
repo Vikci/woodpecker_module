@@ -10,6 +10,12 @@
       "role": "Developer"
     }
   ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/Vikci/woodpecker_module.git"
+    }
+  ],
   "keywords": ["openemr", "openemr-module"],
   "minimum-stability": "dev",
   "prefer-stable": true,
