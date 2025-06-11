@@ -21,7 +21,13 @@
     "psr-4": {"OpenEMR\\Modules\\CustomModuleWpecker\\": "src/"}
   },
   "require": {
+    "composer/installers": "^2.0",
     "php": ">= 7.4"
+  },
+  "extra": {
+    "installer-paths": {
+      "interface/modules/custom_modules/woodpecker_module": ["vicki/woodpecker_module"]
+    }
   },
   "conflict": {
     "openemr/openemr": "<6.0.0"
