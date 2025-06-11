@@ -17,13 +17,11 @@
     }
   ],
   "keywords": ["openemr", "openemr-module"],
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "autoload": {
     "psr-4": {"OpenEMR\\Modules\\CustomModuleWpecker\\": "src/"}
   },
   "require": {
-    "openemr/oe-module-installer-plugin": "^0.1.0",
+    "vicki/woodpecker_module": "r1.0.0",
     "php": ">= 7.4"
   },
   "conflict": {
