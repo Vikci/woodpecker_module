@@ -2,8 +2,7 @@
   "name": "vicki/woodpecker_module",
   "description": "OpenEMR Custom Module Woodpecker Starter Project",
   "type": "openemr-module",
-  "license": "GPL-3.0",
-  "version": "1.0.0",
+  "license": "GPL-3.0-or-later",
   "authors": [
     {
       "name": "Vicki",
