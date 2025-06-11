@@ -22,7 +22,6 @@
     "psr-4": {"OpenEMR\\Modules\\CustomModuleWpecker\\": "src/"}
   },
   "require": {
-    "vicki/woodpecker_module": "1.0.0",
     "php": ">= 7.4"
   },
   "conflict": {
