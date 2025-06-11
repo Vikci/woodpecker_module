@@ -1,6 +1,6 @@
 <?php
 require_once dirname(__FILE__, 4) . '/globals.php';
-$externalUrl = "https://devcopilot.wpecker.ai/";
+$externalUrl = "https://copilot.wpecker.ai?channel=openemr";
 ?>
 <!DOCTYPE html>
 <html>
