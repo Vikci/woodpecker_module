@@ -10,6 +10,9 @@
       "role": "Developer"
     }
   ],
+  "config": {
+    "disable-scripts": false
+  },
   "repositories": [
     {
       "type": "vcs",
@@ -31,13 +34,13 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "mkdir -p interface/modules/custom_modules/woodpecker_module || true",
-      "mv vendor/vicki/woodpecker_module/* interface/modules/custom_modules/woodpecker_module/ || true",
+      "@php -r \"if (!file_exists('interface/modules/custom_modules/woodpecker_module')) { mkdir('interface/modules/custom_modules/woodpecker_module', 0755, true); }\"",
+      "@php -r \"if (file_exists('vendor/vicki/woodpecker_module')) { rename('vendor/vicki/woodpecker_module', 'interface/modules/custom_modules/woodpecker_module'); }\"",
       "composer dump-autoload"
     ],
     "post-update-cmd": [
-      "mkdir -p interface/modules/custom_modules/woodpecker_module || true",
-      "mv vendor/vicki/woodpecker_module/* interface/modules/custom_modules/woodpecker_module/ || true",
+      "@php -r \"if (!file_exists('interface/modules/custom_modules/woodpecker_module')) { mkdir('interface/modules/custom_modules/woodpecker_module', 0755, true); }\"",
+      "@php -r \"if (file_exists('vendor/vicki/woodpecker_module')) { rename('vendor/vicki/woodpecker_module', 'interface/modules/custom_modules/woodpecker_module'); }\"",
       "composer dump-autoload"
     ]
   },
