@@ -29,6 +29,18 @@
       "interface/modules/custom_modules/woodpecker_module": ["vicki/woodpecker_module"]
     }
   },
+  "scripts": {
+    "post-install-cmd": [
+      "mkdir -p interface/modules/custom_modules/woodpecker_module || true",
+      "mv vendor/vicki/woodpecker_module/* interface/modules/custom_modules/woodpecker_module/ || true",
+      "composer dump-autoload"
+    ],
+    "post-update-cmd": [
+      "mkdir -p interface/modules/custom_modules/woodpecker_module || true",
+      "mv vendor/vicki/woodpecker_module/* interface/modules/custom_modules/woodpecker_module/ || true",
+      "composer dump-autoload"
+    ]
+  },
   "conflict": {
     "openemr/openemr": "<6.0.0"
   }
