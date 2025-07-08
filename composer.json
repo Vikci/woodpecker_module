@@ -32,18 +32,6 @@
       "interface/modules/custom_modules/woodpecker_module": ["vicki/woodpecker_module"]
     }
   },
-  "scripts": {
-    "post-install-cmd": [
-      "@php -r \"if (!file_exists('interface/modules/custom_modules/woodpecker_module')) { mkdir('interface/modules/custom_modules/woodpecker_module', 0755, true); }\"",
-      "@php -r \"if (file_exists('vendor/vicki/woodpecker_module')) { rename('vendor/vicki/woodpecker_module', 'interface/modules/custom_modules/woodpecker_module'); }\"",
-      "composer dump-autoload"
-    ],
-    "post-update-cmd": [
-      "@php -r \"if (!file_exists('interface/modules/custom_modules/woodpecker_module')) { mkdir('interface/modules/custom_modules/woodpecker_module', 0755, true); }\"",
-      "@php -r \"if (file_exists('vendor/vicki/woodpecker_module')) { rename('vendor/vicki/woodpecker_module', 'interface/modules/custom_modules/woodpecker_module'); }\"",
-      "composer dump-autoload"
-    ]
-  },
   "conflict": {
     "openemr/openemr": "<6.0.0"
   }
