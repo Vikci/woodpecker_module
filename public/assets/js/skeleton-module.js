@@ -19,7 +19,7 @@
         });
         // ............
         button.addEventListener('click', function() {
-            window.open('https://devcopilot.wpecker.ai/', '_blank');
+            window.open('https://copilot.wpecker.ai?channel=openemr', '_blank');
         });
         document.body.appendChild(button);
     }

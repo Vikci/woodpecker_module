@@ -2,7 +2,7 @@
   "name": "vicki/woodpecker_module",
   "description": "OpenEMR Custom Module Woodpecker Starter Project",
   "type": "openemr-module",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "authors": [
     {
       "name": "Vicki",
@@ -10,6 +10,9 @@
       "role": "Developer"
     }
   ],
+  "config": {
+    "disable-scripts": false
+  },
   "repositories": [
     {
       "type": "vcs",
@@ -17,14 +20,17 @@
     }
   ],
   "keywords": ["openemr", "openemr-module"],
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "autoload": {
     "psr-4": {"OpenEMR\\Modules\\CustomModuleWpecker\\": "src/"}
   },
   "require": {
-    "openemr/oe-module-installer-plugin": "^0.1.0",
+    "composer/installers": "^2.0",
     "php": ">= 7.4"
+  },
+  "extra": {
+    "installer-paths": {
+      "interface/modules/custom_modules/woodpecker_module": ["vicki/woodpecker_module"]
+    }
   },
   "conflict": {
     "openemr/openemr": "<6.0.0"

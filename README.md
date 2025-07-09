@@ -1,5 +1,5 @@
 ### Installing Module Via Composer
-Install the package by doing a `composer require vikci/module_pecker`
+Install the package by doing a `composer require vikci/woodpecker_module`
 
 ### Installing Module via filesystem
 If you copy your module into the installation directory you will need to copy your module's composer.json "psr-4" property into your OpenEMR's psr-4 settings.
