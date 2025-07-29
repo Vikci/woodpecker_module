@@ -138,6 +138,7 @@ class Bootstrap
         }
     }
 
+    
     /**
      * We tie into any events dealing with the templates / page rendering of the system here
      */
@@ -152,10 +153,46 @@ class Bootstrap
      * Add our javascript and css file for the module to the main tabs page of the system
      * @param RenderEvent $event
      */
+    /*
     public function renderMainBodyScripts(RenderEvent $event)
     {
         ?>
         <link rel="stylesheet" href="<?php echo $this->getAssetPath();?>css/skeleton-module.css">
+        <script src="<?php echo $this->getAssetPath();?>js/skeleton-module.js"></script>
+        <?php
+    }
+    */
+    /**
+ * Add our javascript and css file for the module to the main tabs page of the system
+ * @param RenderEvent $event
+ */
+    public function renderMainBodyScripts(RenderEvent $event)
+    {
+        global $GLOBALS;
+        $authUserID = $_SESSION['authUserID'] ?? '';
+        $userData = [];
+        if ($authUserID) {
+            $sql = "SELECT username, fname, lname, email, uuid FROM users WHERE id = ?";
+            $result = sqlQuery($sql, [$authUserID]);
+            $userData = [
+                'authUserID' => $authUserID,
+                'username' => $result['username'] ?? '',
+                'first_name' => $result['fname'] ?? '',
+                'last_name' => $result['lname'] ?? '',
+                'email' => $result['email'] ?? '',
+                'uuid' => !empty($result['uuid']) ? bin2hex($result['uuid']) : ''
+            ];
+        }
+        foreach ($userData as $key => $value) {
+            $userData[$key] = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+        }
+        ?>
+        <link rel="stylesheet" href="<?php echo $this->getAssetPath();?>css/skeleton-module.css">
+        <script>
+            // Inject userData into the JavaScript global scope
+            window.openemr = window.openemr || {};
+            window.openemr.userData = <?php echo json_encode($userData); ?>;
+        </script>
         <script src="<?php echo $this->getAssetPath();?>js/skeleton-module.js"></script>
         <?php
     }
